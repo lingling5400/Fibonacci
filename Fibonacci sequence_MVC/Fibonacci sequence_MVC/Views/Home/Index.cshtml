@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "費波那契數列計算機";
+}
+
+<h2>費波那契數列計算機</h2>
+
+@using (Html.BeginForm())
+{
+    <label>請輸入第 N 項：</label>
+
+    <input type="text" name="n" />
+
+    <button type="submit">計算</button>
+}
+
+@if (ViewBag.Error != null)
+{
+    <p>@ViewBag.Error</p>
+}
+<p></p>
+
+@if (ViewBag.Result != null)
+{
+    <p>結果：@ViewBag.Result</p>
+}
